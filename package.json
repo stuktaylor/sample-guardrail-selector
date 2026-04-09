@@ -1,0 +1,25 @@
+{
+    "name": "sample-guardrail-selector-infrastructure",
+    "workspaces": [
+      "infrastructure",
+      "website",
+      "infrastructure/lambda/layers/sample-gs-layer"
+    ],
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "install:all": "npm install && npm run install:web && npm run install:infra",
+      "install:infra": "npm install --workspace=infrastructure",
+      "install:web": "npm install --workspace=website",
+      "build:web": "npm run build --workspace=website",
+      "build:infra": "npm run cdk synth --workspace=infrastructure",
+      "build:layers": "npm run build --workspace=infrastructure/lambda/layers/sample-gs-layer",
+      "build": "npm run build:web && npm run build:infra",
+      "dev": "npm run dev --workspace website",
+      "deploy": "npm run build && npm run deploy --workspace=infrastructure",
+      "deploy:local": "npm run build && npm run deploy:local --workspace=infrastructure",
+      "deploy:aurora": "npm run build && npm run deploy:aurora --workspace=infrastructure",
+      "deploy:local:aurora": "npm run build && npm run deploy:local:aurora --workspace=infrastructure",
+      "destroy": "npm run destroy --workspace=infrastructure"
+    }
+  }

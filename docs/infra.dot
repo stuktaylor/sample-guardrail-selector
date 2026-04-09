@@ -1,0 +1,34 @@
+digraph INFRA {
+  node [ color = "black", fillcolor = "#E6E6E6", height =1, style = "filled,bold,rounded", fontname = "Arial" ];
+  "AuroraServerlessV2Cluster" [ label = "AuroraServerlessV2Cluster
+(AWS::RDS::DBCluster)", shape =cylinder, fillcolor = "#FFCFB3" ];
+  "BedrockUserSecret" [ label = "BedrockUserSecret
+(AWS::SecretsManager::Secret)", shape =cylinder, fillcolor = "#FFF5CD" ];
+  "PgVectorInitFunction" [ label = "PgVectorInitFunction
+(AWS::Lambda::Function)", shape =rectangle, fillcolor = "#B7E0FF" ];
+  "KnowledgeBaseDataBucket" [ label = "KnowledgeBaseDataBucket
+(AWS::S3::Bucket)", shape =cylinder, fillcolor = "#FFF5CD" ];
+  "KnowledgeBase" [ label = "KnowledgeBase
+(AWS::Bedrock::KnowledgeBase)", shape =rectangle, fillcolor = "#B7E0FF" ];
+  "KnowledgeBaseDataSource" [ label = "KnowledgeBaseDataSource
+(AWS::Bedrock::DataSource)", shape =rectangle, fillcolor = "#B7E0FF" ];
+  "SyncKnowledgeBaseFunction" [ label = "SyncKnowledgeBaseFunction
+(AWS::Lambda::Function)", shape =rectangle, fillcolor = "#B7E0FF" ];
+  "WebsiteBucket" [ label = "WebsiteBucket
+(AWS::S3::Bucket)", shape =cylinder, fillcolor = "#FFF5CD" ];
+  "Distribution" [ label = "Distribution
+(AWS::CloudFront::Distribution)", shape =rectangle, fillcolor = "#E78F81" ];
+  "RestAPI" [ label = "RestAPI
+(AWS::ApiGateway::RestApi)", shape =rectangle, fillcolor = "#E78F81" ];
+  "BedrockUserSecret" -> "AuroraServerlessV2Cluster";
+  "PgVectorInitFunction" -> "AuroraServerlessV2Cluster";
+  "PgVectorInitFunction" -> "BedrockUserSecret";
+  "KnowledgeBase" -> "KnowledgeBaseDataBucket";
+  "KnowledgeBase" -> "AuroraServerlessV2Cluster";
+  "KnowledgeBaseDataSource" -> "KnowledgeBase";
+  "KnowledgeBaseDataSource" -> "KnowledgeBaseDataBucket";
+  "SyncKnowledgeBaseFunction" -> "KnowledgeBase";
+  "SyncKnowledgeBaseFunction" -> "KnowledgeBaseDataSource";
+  "Distribution" -> "WebsiteBucket";
+  "RestAPI" -> "KnowledgeBase";
+}

@@ -1,0 +1,150 @@
+/* Agent Chat Styles */
+
+/* Custom scrollbar for the chat container */
+.MuiBox-root {
+  scrollbar-width: thin;
+  scrollbar-color: #bdbdbd #f5f5f5;
+}
+
+.MuiBox-root::-webkit-scrollbar {
+  width: 8px;
+}
+
+.MuiBox-root::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.MuiBox-root::-webkit-scrollbar-thumb {
+  background-color: #bdbdbd;
+  border-radius: 4px;
+  border: 2px solid #f5f5f5;
+}
+
+/* Animation for loading indicator */
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.loading-indicator {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Message transition effects */
+.message-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.message-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Source citation styling */
+.source-citation {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed #e0e0e0;
+}
+
+/* Agent chat specific styles */
+.agent-chat-container {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.agent-message {
+  background-color: #e8f5e9 !important;
+}
+
+.guardrails-manager {
+  margin-top: 20px;
+}
+
+.guardrail-card {
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.guardrail-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.guardrail-details-dialog .MuiDialogContent-root {
+  padding: 16px 24px;
+}
+
+.filter-chip {
+  margin: 4px;
+}
+
+.topic-policy-item {
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+}
+
+.current-guardrail-indicator {
+  background-color: #e8f5e9;
+  border-left: 4px solid #4caf50;
+}
+
+.guardrail-select {
+  min-width: 250px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.guardrail-accordion {
+  margin-bottom: 8px;
+}
+
+.guardrail-accordion-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.guardrail-accordion-details {
+  padding: 8px 16px 16px;
+}
+
+.guardrail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.guardrail-section {
+  margin-bottom: 24px;
+}
+
+.guardrail-section-title {
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.guardrail-loading {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}

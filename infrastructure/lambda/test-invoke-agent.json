@@ -1,0 +1,57 @@
+{
+  "resource": "/agent/invoke",
+  "path": "/agent/invoke",
+  "httpMethod": "POST",
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Type": "application/json",
+    "Host": "api-id.execute-api.us-east-1.amazonaws.com",
+    "Origin": "https://example.com",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36"
+  },
+  "multiValueHeaders": {
+    "Accept": ["*/*"],
+    "Accept-Encoding": ["gzip, deflate, br"],
+    "Content-Type": ["application/json"],
+    "Host": ["api-id.execute-api.us-east-1.amazonaws.com"],
+    "Origin": ["https://example.com"],
+    "User-Agent": ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36"]
+  },
+  "queryStringParameters": null,
+  "multiValueQueryStringParameters": null,
+  "pathParameters": null,
+  "stageVariables": null,
+  "body": "{\"message\":\"how do you make waffles?\"}",
+  "isBase64Encoded": false,
+  "requestContext": {
+    "resourceId": "abc123",
+    "resourcePath": "/agent/invoke",
+    "httpMethod": "POST",
+    "extendedRequestId": "request-id",
+    "requestTime": "24/Apr/2025:15:50:00 +0000",
+    "path": "/prod/agent/invoke",
+    "accountId": "123456789012",
+    "protocol": "HTTP/1.1",
+    "stage": "prod",
+    "domainPrefix": "api-id",
+    "requestTimeEpoch": 1714147800000,
+    "requestId": "c6af9ac6-7b61-11e6-9a41-93e8deadbeef",
+    "identity": {
+      "cognitoIdentityPoolId": null,
+      "accountId": null,
+      "cognitoIdentityId": null,
+      "caller": null,
+      "sourceIp": "192.0.2.1",
+      "principalOrgId": null,
+      "accessKey": null,
+      "cognitoAuthenticationType": null,
+      "cognitoAuthenticationProvider": null,
+      "userArn": null,
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36",
+      "user": null
+    },
+    "domainName": "api-id.execute-api.us-east-1.amazonaws.com",
+    "apiId": "api-id"
+  }
+}
