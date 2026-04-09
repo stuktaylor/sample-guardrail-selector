@@ -7,7 +7,7 @@ const resources = {
   en: {
     translation: {
       // Common
-      'common.app.TITLE': 'Sample Guardrail Selector',
+      'common.app.TITLE': 'CRWD Interview Demo',
       'common.buttons.SEND': 'Send',
       'common.buttons.CLEAR': 'Clear',
       'common.buttons.CLOSE': 'Close',
@@ -19,7 +19,7 @@ const resources = {
       'common.languages.SPANISH': 'Español',
       
       // Layout
-      'layout.header.TITLE': 'Sample Guardrail Selector',
+      'layout.header.TITLE': 'CRWD Interview Demo',
       'layout.footer.WELCOME': 'Welcome to the sample',
       
       // Chat

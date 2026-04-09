@@ -79,51 +79,6 @@ export class SampleGSStack extends cdk.Stack {
       useDefaultPiiEntityTypes: true
     });
 
-    // Basic has PROMPT_ATTACK as each guardrail must have at least one content filter.
-    const guardrailBasic = new SampleGSStackGuardrail(this, 'GuardrailBasic', {
-      guardrailConfig: {
-        name: `${props?.prefix}_Basic`,
-        description: 'Guardrail to prevent harmful content',
-        contentFilters: [
-          {
-            type: 'PROMPT_ATTACK',
-            inputStrength: 'MEDIUM',
-            outputStrength: 'NONE'
-          }
-        ]
-      },
-      useDefaultContentFilters: false,
-      useDefaultTopicPolicies: false,
-      useDefaultPiiEntityTypes: false
-    });
-    const guardrailContent = new SampleGSStackGuardrail(this, 'GuardrailContent', {
-      guardrailConfig: {
-        name: `${props?.prefix}_Content`,
-        description: 'Guardrail to prevent harmful content'
-      },
-      useDefaultContentFilters: true,
-      useDefaultTopicPolicies: false,
-      useDefaultPiiEntityTypes: false
-    });
-    const guardrailTopics = new SampleGSStackGuardrail(this, 'GuardrailTopics', {
-      guardrailConfig: {
-        name: `${props?.prefix}_Topics`,
-        description: 'Guardrail to prevent harmful content'
-      },
-      useDefaultContentFilters: false,
-      useDefaultTopicPolicies: true,
-      useDefaultPiiEntityTypes: false
-    });
-    const guardrailPII = new SampleGSStackGuardrail(this, 'GuardrailPii', {
-      guardrailConfig: {
-        name: `${props?.prefix}_PII`,
-        description: 'Guardrail to prevent harmful content'
-      },
-      useDefaultContentFilters: false,
-      useDefaultTopicPolicies: false,
-      useDefaultPiiEntityTypes: true
-    });
-
     // Get the shared Lambda layers
     const lambdaLayers = new SampleGSStackLambdaLayers(this, 'LambdaLayers');
 

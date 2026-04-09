@@ -88,3 +88,5 @@ Thumbs.db
 
 # Terraform specific lambda zip files
 terraform/lambda/*/*.zip
+
+knowledgebase/*
